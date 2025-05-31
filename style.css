@@ -1,0 +1,236 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: white;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%; 
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-head{
+    font-size: 50px
+
+  }
+  #about img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    opacity: 1; 
+  }
+  #about img:hover {
+    opacity: 0.8;
+    
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Header */
+  header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sections */
+  section {
+    padding: 40px 0;
+    background: #fff;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+  }
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+  }
+  
+@media (max-width: 768px) {
+    .main-nav {
+      display: none !important;
+    }
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  
+  .side-menu a {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .side-menu a:hover {
+    background-color: #444;
+  }
+  
+  .side-menu .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  @keyframes slideInTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-in-top {
+    animation: slideInTop 1s ease-out forwards;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0% 20%;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  form button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+
+  #projects {
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Ensures text is visible on dark background */
+  }
+  
+  #projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('images/projects.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  
+  
+ 
+   
+  
